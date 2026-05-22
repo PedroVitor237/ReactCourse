@@ -39,6 +39,12 @@ function TaskDetailsPage() {
                 <p>{searchParams.get("description")}</p>
             </div>
             */}
+            
+            <button>
+                <a href="/" className="text-white bg-slate-400 p-2 rounded mb-2">
+                    Back to Home
+                </a>
+            </button>
 
         </div>  
     );
