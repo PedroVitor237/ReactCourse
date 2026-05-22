@@ -29,12 +29,15 @@ function AddTask({ onAddTask }) {
                 className="w-full bg-slate-400 text-white p-2 rounded"
                 onClick={() => {
                     // Only add the task if the title is not empty (after trimming whitespace)
-                    if (title.trim() !== "") {
-                        onAddTask(title, description);
-                        // Clear the input fields after adding the task
-                        setTitle("");
-                        setDescription("");
+                    if (title.trim() === "") {
+                        return alert("Task title cannot be empty");
                     }
+                    
+                    onAddTask(title, description);
+                    // Clear the input fields after adding the task
+                    setTitle("");
+                    setDescription("");
+                    
                 }}
             >
                 <ListPlus className="inline-block mr-2" />
