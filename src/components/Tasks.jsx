@@ -1,4 +1,5 @@
 function Tasks(props) {
+
     return (
         <div>
             <h2>Tasks</h2>
@@ -7,8 +8,12 @@ function Tasks(props) {
                 {props.tasks.map((task) => (
                     <li key={task.id} className="flex gap-2">
 
-                        <button className="text-white text-left bg-slate-400 w-full p-2 rounded mb-2">
+                        <button 
+                            onClick={() => props.onTaskClick(task.id)}
+                            className={`text-white text-left bg-slate-400 w-full p-2 rounded mb-2 ${task.isCompleted && "line-through"}`}
+                        >
                             {task.title}
+                            {task.isCompleted ? " (Completed)" : " (Incomplete)"}
                         </button>
 
                         <button className="text-white bg-slate-400 p-2 rounded mb-2">
@@ -26,4 +31,5 @@ export default Tasks;
 
 
 
-{/* <button className="ml-4">{task.completed ? "Completed" : "Incomplete"}</button> */}
+
+{/* <button className="ml-4">{task.isCompleted ? "Completed" : "Incomplete"}</button> */}

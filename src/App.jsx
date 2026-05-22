@@ -5,10 +5,25 @@ import { useState } from 'react';
 function App() {
 
     const [tasks, setTasks] = useState([
-        { id: 1, title: "Task 1", completed: false },
-        { id: 2, title: "Task 2", completed: true },
-        { id: 3, title: "Task 3", completed: false },
+        // Hardcoded tasks for testing purposes
+        { id: 1, title: "Task 1", isCompleted: false },
+        { id: 2, title: "Task 2", isCompleted: true },
+        { id: 3, title: "Task 3", isCompleted: false },
     ]);
+
+    // Update the tasks state by toggling the completed status of the clicked task
+    function onTaskClick(taskId) {
+        const updatedTasks = tasks.map((task) => {
+            // It's needed to update this task
+            if (task.id === taskId) {
+                return { ...task, isCompleted: !task.isCompleted };
+            }
+            // No need to update this task, return it as is
+            return task;
+        });
+
+        setTasks(updatedTasks);
+    }
 
     return (
         <div className="w-screen h-screen bg-slate-500 flex justify-center p-6">
@@ -17,7 +32,7 @@ function App() {
                 <h1 className="text-3xl text-slate-100 font-bold text-center">Task Manager</h1>
                 
                 <AddTask />
-                <Tasks tasks={tasks} />
+                <Tasks tasks={tasks} onTaskClick={onTaskClick} />
 
             </div>
         </div>
@@ -54,5 +69,23 @@ function App() {
 
     );
 }
+
+*/
+
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+
+// Suggested code by Copilot for toggling task completion status when a task is clicked. This function updates the tasks state by mapping through the existing tasks and toggling the completed status of the task that was clicked based on its id.
+// Remember to verify which way if more suitable and efficient //
+
+/*
+
+function onTaskClick(taskId) {
+        // Update the tasks state by toggling the completed status of the clicked task
+        setTasks((prevTasks) =>
+            prevTasks.map((task) =>
+                task.id === taskId ? { ...task, completed: !task.completed } : task
+            )
+        );
+    }
 
 */
