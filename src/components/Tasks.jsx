@@ -6,9 +6,11 @@ function Tasks(props) {
 
     return (
         <div>
-            <h2>Tasks</h2>
 
             <ul className="space-y-2 p-3 bg-slate-200 rounded-md shadow-md"> 
+                
+                <h2>Tasks</h2>
+
                 {/* Map through the tasks array and display each task */}
                 {props.tasks.map((task) => (
                     <li key={task.id} className="flex gap-2">

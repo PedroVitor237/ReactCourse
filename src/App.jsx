@@ -6,9 +6,9 @@ function App() {
 
     const [tasks, setTasks] = useState([
         // Hardcoded tasks for testing purposes
-        { id: 1, title: "Task 1", isCompleted: false },
-        { id: 2, title: "Task 2", isCompleted: true },
-        { id: 3, title: "Task 3", isCompleted: false },
+        { id: 1, title: "Task 1", description: "This is the first task", isCompleted: false },
+        { id: 2, title: "Task 2", description: "This is the second task", isCompleted: true },
+        { id: 3, title: "Task 3", description: "This is the third task", isCompleted: false },
     ]);
 
     // Update the tasks state by toggling the completed status of the clicked task
@@ -37,7 +37,7 @@ function App() {
 
     return (
         <div className="w-screen h-screen bg-slate-500 flex justify-center p-6">
-            <div className="w-[500px]">
+            <div className="w-[500px] space-y-6">
 
                 <h1 className="text-3xl text-slate-100 font-bold text-center">Task Manager</h1>
                 
