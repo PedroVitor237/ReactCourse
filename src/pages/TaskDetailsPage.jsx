@@ -1,4 +1,6 @@
-import { useSearchParams } from "react-router-dom";
+import { ChevronLeft } from "lucide-react";
+import { useSearchParams, useNavigate } from "react-router-dom";
+
 
 function TaskDetailsPage() {
 
@@ -6,10 +8,25 @@ function TaskDetailsPage() {
     const title = searchParams.get("title"); // Get the title from the search parameters
     const description = searchParams.get("description"); // Get the description from the search parameters
     const isCompleted = searchParams.get("isCompleted"); // Get the isCompleted status from the search parameters
+    const navigate = useNavigate(); // Get the navigate function from react-router-dom to navigate programmatically
 
     return (
         <div className="w-screen h-screen bg-slate-500 flex items-center p-6 flex-col gap-4 space-y-6 rounded-md shadow-md">
-            <h1 className="text-4xl text-slate-100 font-bold">Task Details Page</h1>
+            
+            <div className="flex justify-center relative w-full p-6">
+
+                <button 
+                className="absolute left-0 top-1/2 -translate-y-1/2 text-white bg-slate-400 p-2 rounded mb-2" 
+                onClick={() => navigate(-1)}
+                >
+                    <ChevronLeft className="inline-block mr-2" />
+                </button>
+
+                <h1 className="text-4xl text-slate-100 font-bold">
+                    Task Details Page
+                </h1>
+
+            </div>
 
             <div className="w-[500px] space-y-4 flex gap-2 flex-col">
 
@@ -29,25 +46,37 @@ function TaskDetailsPage() {
 
             </div>
 
-            {/*
-            Alternative way without using URLSearchParams:
-            <div className="bg-slate-200 p-4 rounded-md shadow-md">
-                <h1>{searchParams.get("title")}</h1>
-            </div>
-
-            <div className="bg-slate-200 p-4 rounded-md shadow-md">
-                <p>{searchParams.get("description")}</p>
-            </div>
-            */}
             
+            {/* Future implementation */}
+            {/* Home and Edit buttons */}
+            
+            {/* 
             <button>
+                <House />
+
                 <a href="/" className="text-white bg-slate-400 p-2 rounded mb-2">
                     Back to Home
                 </a>
-            </button>
+            </button> 
+            */}
 
         </div>  
     );
 }
 
 export default TaskDetailsPage;
+
+
+
+
+
+        {/*
+        Alternative way without using URLSearchParams:
+        <div className="bg-slate-200 p-4 rounded-md shadow-md">
+            <h1>{searchParams.get("title")}</h1>
+        </div>
+
+        <div className="bg-slate-200 p-4 rounded-md shadow-md">
+            <p>{searchParams.get("description")}</p>
+        </div>
+        */}
