@@ -45,19 +45,8 @@ function TaskDetailsPage() {
 
             </div>
 
-            
             {/* Future implementation */}
             {/* Home and Edit buttons */}
-            
-            {/* 
-            <button>
-                <House />
-
-                <a href="/" className="text-white bg-slate-400 p-2 rounded mb-2">
-                    Back to Home
-                </a>
-            </button> 
-            */}
 
         </div>  
     );
@@ -69,13 +58,14 @@ export default TaskDetailsPage;
 
 
 
-        {/*
-        Alternative way without using URLSearchParams:
-        <div className="bg-slate-200 p-4 rounded-md shadow-md">
-            <h1>{searchParams.get("title")}</h1>
-        </div>
+{/*
+Alternative way without using URLSearchParams:
 
-        <div className="bg-slate-200 p-4 rounded-md shadow-md">
-            <p>{searchParams.get("description")}</p>
-        </div>
-        */}
+<div className="bg-slate-200 p-4 rounded-md shadow-md">
+    <h1>{searchParams.get("title")}</h1>
+</div>
+
+<div className="bg-slate-200 p-4 rounded-md shadow-md">
+    <p>{searchParams.get("description")}</p>
+</div>
+*/}

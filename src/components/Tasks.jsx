@@ -61,9 +61,3 @@ function Tasks(props) {
 }
 
 export default Tasks;
-
-
-
-
-
-{/* <button className="ml-4">{task.isCompleted ? "Completed" : "Incomplete"}</button> */}

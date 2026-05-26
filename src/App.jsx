@@ -75,41 +75,10 @@ function App() {
 export default App;
 
 
-
-
-/*---------------------------------------------------------------------------------------------------------------------------------*/
-
-
-/*
-
-function App() {
-
-    const defaultMessage = "This is my first React app!";
-
-    // State: is a way to store and manage data in a React component. It allows us to create dynamic and interactive user interfaces.
-    const [message, setMessage] = useState("Click the button!");
-
-    return (
-
-        <div>
-            <h1 className='text-blue-500'>Hello World!</h1>
-            <p>{defaultMessage}</p>
-
-            <button onClick={() => setMessage("You clicked the button!")}>
-                {message}
-            </button>
-        </div>
-
-    );
-}
-
-*/
-
 /*---------------------------------------------------------------------------------------------------------------------------------*/
 
 // Suggested code by Copilot for toggling task completion status when a task is clicked. This function updates the tasks state by mapping through the existing tasks and toggling the completed status of the task that was clicked based on its id.
 // Remember to verify which way if more suitable and efficient //
-
 /*
 
 function onTaskClick(taskId) {
@@ -122,8 +91,6 @@ function onTaskClick(taskId) {
     }
 
 */
-
-
 
 // -------------------------------------------------------------------------------------------------- //
 
