@@ -1,5 +1,7 @@
 import { ChevronLeft } from "lucide-react";
 import { useSearchParams, useNavigate } from "react-router-dom";
+import Title from "../components/Title";
+import Button from "../components/Button";
 
 
 function TaskDetailsPage() {
@@ -15,16 +17,13 @@ function TaskDetailsPage() {
             
             <div className="flex justify-center relative w-full p-6">
 
-                <button 
-                className="absolute left-0 top-1/2 -translate-y-1/2 text-white bg-slate-400 p-2 rounded mb-2" 
+                <Button 
                 onClick={() => navigate(-1)}
                 >
                     <ChevronLeft className="inline-block mr-2" />
-                </button>
+                </Button>
 
-                <h1 className="text-4xl text-slate-100 font-bold">
-                    Task Details Page
-                </h1>
+                <Title>Task Details Page</Title>
 
             </div>
 

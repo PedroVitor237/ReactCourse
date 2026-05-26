@@ -2,6 +2,8 @@ import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
 import { useEffect, useState } from 'react';
 
+import Title from './components/Title';
+
 function App() {
 
     const [tasks, setTasks] = useState(
@@ -60,7 +62,7 @@ function App() {
         <div className="w-screen h-screen bg-slate-500 flex justify-center p-6">
             <div className="w-[500px] space-y-6">
 
-                <h1 className="text-3xl text-slate-100 font-bold text-center">Task Manager</h1>
+                <Title>Task Manager</Title>
                 
                 <AddTask onAddTask={onAddTask} />
                 <Tasks tasks={tasks} onTaskClick={onTaskClick} onTaskDelete={onTaskDelete} />
@@ -189,3 +191,5 @@ useEffect(() => {
 
 - Accessibility improvements: Ensure that the application is accessible to all users, including those with disabilities, by following accessibility best practices and guidelines.
 */
+
+// Study Class Components, cause in this project was used only functional components... They are an older way of writing React components, but it's still important to understand them, especially if you need to work on legacy codebases that use class components. Class components use a different syntax and lifecycle methods compared to functional components, and they can be more complex to work with, especially when it comes to managing state and side effects. However, they are still widely used in many React applications, so it's good to have a basic understanding of how they work.

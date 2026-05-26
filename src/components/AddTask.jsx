@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ListPlus } from 'lucide-react';
 import Input from "./Input";
+import Button from "./Button";
 
 function AddTask({ onAddTask }) {
 
@@ -24,8 +25,7 @@ function AddTask({ onAddTask }) {
                 onChange={(event) => setDescription(event.target.value)}
             />
 
-            <button 
-                className="w-full bg-slate-400 text-white p-2 rounded"
+            <Button 
                 onClick={() => {
                     // Only add the task if the title is not empty (after trimming whitespace)
                     if (title.trim() === "") {
@@ -36,12 +36,11 @@ function AddTask({ onAddTask }) {
                     // Clear the input fields after adding the task
                     setTitle("");
                     setDescription("");
-                    
                 }}
             >
                 <ListPlus className="inline-block mr-2" />
                 <strong>Add Task</strong>
-            </button>
+            </Button>
         </div>
     );
 }

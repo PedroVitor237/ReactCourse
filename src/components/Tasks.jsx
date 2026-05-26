@@ -1,5 +1,6 @@
 import { Trash } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import Button from "./Button";
 
 function Tasks(props) {
 
@@ -40,25 +41,17 @@ function Tasks(props) {
                             {task.isCompleted ? " (Completed)" : " (Incomplete)"}
                         </button>
 
-                        <button 
-                            onClick={() => onDetailsClick(task)}
-                            className="text-white bg-slate-400 p-2 rounded mb-2"
+                        <Button
+                            onClick={() => onDetailsClick(task)}S
                         >
                             <code>Details</code>
-                        </button>
+                        </Button>
 
-                        {/* 
-                        <button className="text-white bg-slate-400 p-2 rounded mb-2">
-                            <code>Edit</code>
-                        </button> 
-                        */}
-
-                        <button 
-                        onClick={() => props.onTaskDelete(task.id)} 
-                        className="text-white bg-slate-400 p-2 rounded mb-2"
+                        <Button
+                            onClick={() => props.onTaskDelete(task.id)}
                         >
                             <Trash />
-                        </button>
+                        </Button>
                     </li>
                 ))}
             </ul>
